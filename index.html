@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Restart</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="plans.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+    </head>
+    <body>
+
+
+     <div id="navigbar"><nav class ="navbar navbar-expand-lg  navbar-light bg-light">
+       <div class="fullHeader">
+        <div class="container fluid   navheader" >
+        <a class ="navbar-brand "  style=font-size:medium,
+        "color":"aqua"  href="#"> <p>Jetty</p> </a>
+        
+        </div><div class="endHeader">
+        
+        
+        <a class ="navbar-brand"  href="#">
+        <img class="imgsize" src="../images/icons8-phone-24.png"/>
+         </a>
+        
+         <a class ="navbar-brand"  href="#">
+         <img class="imgsize" src="../images/icons8-chat-bubble-24.png"/>
+          </a>
+          </div>
+        </div>
+        </nav>
+        </div>
+     <h3 class="headingText">Pick a Basic Plan</h3>
+     <div class="cardAlign" id="buttonparent">
+
+        <button class="button" id="0" onclick=reply(this.id)>
+     <div class="planCard">
+      <p class="plantextcolour"> Basic</p>
+      <p> A no-frills plan to meet most landlord's requirements</p>
+      <p>$ 12 55/mo</p>
+     
+     <div>
+        <p>KEY FEATURES</p>
+
+     </div>
+     <div>
+        <p>Everyday Belongings <span>$10,000</span></p>
+        <p>Portable Electronics <span>$1,000</span></p>
+        <p>Personal Liabilities <span>$100,000</span></p>
+     </div>
+    </div>
+</button>
+    <button class="button" id="1" onclick=reply(this.id)>
+    <div class="planCard">
+       
+        <p class="plantextcolour"> Essential</p>
+        <p> our top seller for "the average renter"</p>
+        <p>$ 18 55/mo</p>
+       
+       <div>
+          <p>KEY FEATURES</p>
+  
+       </div>
+       <div>
+          <p>Everyday Belongings <span>$20,000</span></p>
+          <p>Portable Electronics <span>$1,000</span></p>
+          <p>Personal Liabilities <span>$200,000</span></p>
+       </div>
+    </div>  </button>
+       
+    <button class="button" id="2" onclick=reply(this.id) >
+      <div class="planCard">
+        <p class="plantextcolour"> Premium</p>
+        <p> The Perfect plan for those with a few extra belongings </p>
+        <p>$ 33 55/mo</p>
+       
+       <div>
+          <p>KEY FEATURES</p>
+  
+       </div>
+       <div>
+          <p>Everyday Belongings <span>$40,000</span></p>
+          <p>Portable Electronics <span>$3,000</span></p>
+          <p>Personal Liabilities <span>$300,000</span></p>
+       </div>
+      </div>
+      </button>
+   
+    </div>
+    <br/><br/>
+    <div class="chooseplancontainer">
+        <button type="submit" class="chooseplan" id="plan" onclick=spinner()>
+          Choose Plan
+       </button>
+       <div class="loader">
+        <div class="loading">
+        </div>
+      </div>
+    </div>
+
+    <script>
+        var selectid;
+    function reply(clicked){
+   selectid=clicked;
+}
+    function hrefFunction(){
+    var count=document.getElementById("buttonparent").childElementCount;
+    console.log(document.getElementById(selectid));
+    for(i=0;i<count;i++)
+    { if(selectid!=i){
+        document.getElementById(i).style.transform="translate(100px,20px)";
+    }
+
+    }
+        console.log(count);
+        document.getElementById(selectid).innerHTML=`<button class="button  changecard" ><div >
+          
+            <p class="plantextcolour"> Essential</p>
+            <p>212 south  braodway street,Apr </p>
+            <p>Start Date<span/><span/> Today</p>
+            <p>Deductible<span/><span/>$500 </p>
+            
+            <p>Household Belongings><span/>$20,000</p>
+            <p>Electronics Coverage<span/>$2,000</p>
+             </div>
+            </button>`;
+            document.getElementById(selectid).style.transform="translate(300px,-80px)";
+           setTimeout(anotherWindow,100);
+        }
+        function anotherWindow(){
+         
+            window.location.href = "http://127.0.0.1:5500/plandetails.html";
+        }
+        function spinner() {
+            document.getElementsByClassName("loader")[0].style.display = "block";
+            hrefFunction();
+        }
+    </script>
+    </body>
+</html>

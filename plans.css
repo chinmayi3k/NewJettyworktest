@@ -1,0 +1,138 @@
+.planCard{
+    height:40vh;
+    width:20vw;
+    margin:20px;
+   
+   position:relative;
+    padding:2px;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    box-sizing: border-box;
+    box-shadow: inset;
+}
+.body{
+    margin: 0px;
+    background-color:lightgray;
+}
+.cardAlign{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.compName{
+    font-size: 2em;
+    color:aqua;
+    justify-content:end;
+}
+.imgsize{
+    height:4vh;
+    width:4vw;
+}
+.navheader{
+    display:flex;
+    height:10vh ;
+    width:50vw;
+    justify-content: center;
+    
+}
+.headingText{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+.endHeader{
+display:flex;
+flex-direction: row-reverse;
+height:10vh;
+width:50vw;
+}
+.fullHeader{
+    display:flex;
+    flex-direction: row;
+    height:10vh;
+    width:100vw;
+}
+.button{
+padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color:black;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px white;
+  opacity: 1px;
+}
+.button:active {
+    background-color:white;
+    box-shadow: 0 5px #666;
+    transform: translateY(10px);
+    border-color:whitesmoke;
+  }
+.plantextcolour{
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+}
+.chooseplan{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    border:none ;
+    padding: 20px 40px;
+    
+}
+.chooseplancontainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.changecard{
+    height:40vh;
+    width:20vw;
+    margin:20px;
+   
+   position:relative;
+    padding:2px;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    box-sizing: border-box;
+    box-shadow: inset;
+   
+   
+    
+}
+
+.loader {
+    display: none;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  
+  .loading {
+    border: 2px solid #ccc;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-top-color: #1ecd97;
+    border-left-color: #1ecd97;
+    animation: spin 1s infinite ease-in;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

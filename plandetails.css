@@ -1,0 +1,59 @@
+.leftalign
+{
+    display:flex;
+    flex-direction: column;
+    width:30vw;
+   margin-left: 5vh;
+}
+.headingcustomise{
+    color:Black;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+  .changecard{
+    height:40vh;
+    width:20vw;
+    margin:20px;
+   
+   position:relative;
+    padding:2px;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    box-sizing: border-box;
+    box-shadow: inset;
+    transform:translate(50vw,-20vh);
+   
+    
+}
+body{
+    margin: 0px;
+    background-color:aliceblue;
+}
+
+
+.dateChange{
+height:5vh;
+width:5vw;
+background-color: white;
+}
+.plantextcolour{
+    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+}
+.button{
+    padding: 15px 25px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color:black;
+      background-color: whitesmoke;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 9px white;
+      opacity: 1px;
+    }
+    
